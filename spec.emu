@@ -1,0 +1,28 @@
+<!doctype html>
+<meta charset="utf8">
+<link rel="stylesheet" href="./spec.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+<script src="./spec.js"></script>
+<pre class="metadata">
+title: Array.prototype.compare
+stage: -1
+contributors: Hemanth HM, Jordan Harband
+</pre>
+
+<emu-clause id="sec-demo-clause">
+  <h1>Array.prototype.compare(comparefn([key, value]))</h1>
+  <p>Algorithm</p>
+  <p>When the `compare` method is invoked, the following steps are taken:</p>
+  <emu-alg>
+  1. If _comparefn_ is not _undefined_ and _IsCallable(comparefn)_ is _false_, throw a _TypeError_ exception.
+  1. If _IsFunction_ _comparefn_
+     1. Should accept wo arguments: each a tuple of [value, key].
+        1. If _value_ and key are both _undefined_, return +0.
+        1. If _value_ is _undefined_, return 1.
+        1. If _key_ is _undefined_, return -1.
+  1. If _comparefn_ is _undefined_
+      1. Let _v_ be ? _ToNumber_(? _Call_(_comparefn_, _undefined_, « key, value »)).
+      1. If _v_ is _NaN_, return +0.
+      1. Return v.
+  </emu-alg>
+</emu-clause>

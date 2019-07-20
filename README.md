@@ -1,0 +1,2 @@
+# Array.prototype.compare
+> WIP
