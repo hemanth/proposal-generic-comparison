@@ -6,7 +6,31 @@ Comparing arrays are one of the most common operations we do on arrays, and ther
 
 # How is being done now?
 
-There is no standard way to do it, there are few modules like [array-equal](https://www.npmjs.com/package/array-equal), [deep-equal](https://www.npmjs.com/package/deep-equal) with like 5M and 8M downloads per week respectivly, which come close to compare, but not really comparing each of the elements.
+There is no standard way to do it, there are few modules like [array-equal](https://www.npmjs.com/package/array-equal), [deep-equal](https://www.npmjs.com/package/deep-equal) with like 5M and 8M downloads per week respectivly, which is subset of deep comparison.
+
+Consider few examples:
+
+```js
+const equal = require('deep-equal');
+console.dir([
+    equal(
+        { a : [ 2, 3 ], b : [ 4 ] },
+        { a : [ 2, 3 ], b : [ 4 ] }
+    ),
+    equal(
+        { x : 5, y : [6] },
+        { x : 5, y : 6 }
+    )
+]);
+```
+
+__node builtin:__
+```js
+// assert.deepStrictEqual(actual, expected[, message])
+
+deepStrictEqual([new Uint32Array([1, 2, 3, 4]).subarray(1, 3), new Uint32Array([2, 3])]);
+```
+
 
 # How we could do it?
 
