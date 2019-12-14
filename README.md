@@ -39,8 +39,11 @@ deepStrictEqual([new Uint32Array([1, 2, 3, 4]).subarray(1, 3), new Uint32Array([
 
 # How we could do it?
 
-`Array.prototype.compare` takes a comparator function, which gets two arguments: each a tuple of `[value, key]` and it returns `< 0, 0, or > 1` (and throws when a non-finite-non-integer is returned) and then it would return either `-1, 0, or 1`
-that way we could write our own logic, and get back `0` if they were equal.
+`Array.prototype.compare` takes a comparator function, which gets two arguments.
+
+Each a tuple of `[value, key]` and it returns `< 0, 0, or > 1` (and throws when a non-finite-non-integer is returned) and then it would return either `-1, 0, or 1`
+
+That way we could write our own logic, and get back `0` if they were equal.
 
 
 P.S: This was a proposal evolved [Array.prototype.equals](https://github.com/hemanth/Array.prototype.equals).
