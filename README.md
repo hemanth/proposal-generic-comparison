@@ -11,17 +11,22 @@ There is no standard way to do it, there are few modules like [array-equal](http
 Consider few examples:
 
 ```js
+// Schmea validation
 const equal = require('deep-equal');
-console.dir([
-    equal(
-        { a : [ 2, 3 ], b : [ 4 ] },
-        { a : [ 2, 3 ], b : [ 4 ] }
-    ),
-    equal(
-        { x : 5, y : [6] },
-        { x : 5, y : 6 }
-    )
-]);
+
+const expectedSchema = {
+  name: {
+    type: String,
+    required: true
+  },
+  score: {
+    type: Number,
+    default: 0
+  }
+};
+
+equal(schemaCall.args[0], expectedSchema);
+
 ```
 
 __node builtin:__
