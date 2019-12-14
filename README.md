@@ -44,3 +44,15 @@ that way we could write our own logic, and get back `0` if they were equal.
 
 
 P.S: This was a proposal evolved [Array.prototype.equals](https://github.com/hemanth/Array.prototype.equals).
+
+__Extending the idea to a three-way comparison:__
+
+We could rather have a `<=>` three-way compare operator, that does the below:
+
+```
+         true		      	   false
+a < b    (a <=> b) < 0		 (a <=> b) >= 0
+a <= b   (a <=> b) <= 0		 (a <=> b) > 0
+a > b    (a <=> b) > 0		 (a <=> b) <= 0
+a >= b   (a <=> b) >= 0		 (a <=> b) < 0
+```
