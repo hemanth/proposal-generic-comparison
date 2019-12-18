@@ -30,10 +30,21 @@ equal(schemaCall.args[0], expectedSchema);
 ```
 
 __node builtin:__
+
 ```js
 // assert.deepStrictEqual(actual, expected[, message])
 
 deepStrictEqual([new Uint32Array([1, 2, 3, 4]).subarray(1, 3), new Uint32Array([2, 3])]);
+```
+
+```js
+// assert.deepEqual(actual, expected[, message])
+
+assert.deepEqual( tokenizer( "AD", "G", cldr ), [{
+		type: "G",
+		lexeme: "AD",
+		value: "1"
+	}] );
 ```
 
 
