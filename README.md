@@ -1,4 +1,4 @@
-# Array.prototype.compare
+# Generic Comparison 
 
 # Motivation
 
