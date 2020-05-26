@@ -1,5 +1,8 @@
 # Generic Comparison 
 
+__Author:__ [Hemanth HM](https://github.com/hemanth)
+__Champion:__ [Jordan Harband](https://github.com/ljharb)
+
 # Motivation
 
 Comparing arrays are one of the most common operations we do on arrays, and there is no consitent standard way to compare two array and given that array might have any type of primitives and nested structures, it get more tedious to compare them.
