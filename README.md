@@ -2,7 +2,7 @@
 
 __Author:__ [Hemanth HM](https://github.com/hemanth)
 
-__Champion:__ [Jordan Harband](https://github.com/ljharb)
+__Champions:__ [Jordan Harband](https://github.com/ljharb) & [Hemanth HM](https://github.com/hemanth)
 
 # Motivation
 
